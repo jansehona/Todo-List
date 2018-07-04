@@ -1,34 +1,18 @@
 class V1::TodosController < ApplicationController
+  skip_before_action :verify_authenticity_token
   def index
     @todos = Todo.all
     render json: @todos, status: :ok
+    #render :create, status: :ok
   end
 
-  def create
-    @todo = Todo.new(todo_params)
+  def created
 
-    if @todo.save
-      render json: @todo, status: :created
-    end
   end
 
-  def show
+  def update
   end
 
- def edit
- end
- 
-  def destroy
-    @todo = Todo.destroy(params[:id])
-    if @todo.destroy
-      head(:ok)
-    else
-      head(:unprocessed_entity)
-    end
-  end
-
-  private
-  def todo_params
-    params.require(:todos).permit(:title, :body, :status)
-  end
+   def destroy
+   end
 end
