@@ -19,6 +19,10 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'simple_token_authentication', '~> 1.0'
 gem 'active_model_serializers', '~> 0.8.1'
+gem 'rack-cors', require: 'rack/cors'
+
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick', '~> 4.3'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

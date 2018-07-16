@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :sessions, only: [:create, :destroy]
     resources :users
     end
+    # post '/users/sign_in', to: "sessions#create"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
